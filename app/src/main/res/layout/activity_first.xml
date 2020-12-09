@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".First">
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:id="@+id/layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:id="@+id/card"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:background="#FFEB00"
+
+                    android:padding="10dp"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp">
+
+                        <TextView
+                            android:id="@+id/txt_date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/amaranth_bold_italic"
+                            android:text="DATE"
+                            android:textSize="20dp" />
+
+                        <TextView
+                            android:id="@+id/txt_city"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/txt_date"
+                            android:layout_marginTop="20dp"
+                            android:fontFamily="@font/aclonica"
+                            android:textSize="25dp" />
+                        <TextView
+                            android:id="@+id/txt_max"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/txt_city"
+                            android:textStyle="bold|italic"
+                            android:layout_marginTop="20dp"
+                            android:textSize="15dp"
+                            />
+                        <TextView
+                            android:id="@+id/txt_min"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/txt_max"
+                            android:textStyle="bold|italic"
+                            android:layout_marginTop="20dp"
+                            android:textSize="15dp"
+                            />
+
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="-20dp"
+                        android:layout_centerInParent="true">
+
+                        <TextView
+                            android:id="@+id/txt_temp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:fontFamily="@font/amaranth_bold_italic"
+                            android:textSize="40dp" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/image"
+                            android:layout_width="75dp"
+                            android:layout_height="75dp"
+                            android:layout_below="@+id/txt_temp"
+                            android:layout_centerHorizontal="true" />
+
+                        <TextView
+                            android:id="@+id/txt_desc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/image"
+                            android:layout_centerHorizontal="true"
+                            android:fontFamily="@font/amaranth_bold_italic"
+                            android:textSize="20dp" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/params"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/card"
+                android:paddingTop="20dp"
+               android:background="@drawable/white_back_ground"
+                android:layout_marginTop="-55dp">
+
+                <LinearLayout
+                    android:id="@+id/layout_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card_wind"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        app:cardCornerRadius="20dp"
+                        app:cardElevation="20dp">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/img_pressure"
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/wind" />
+
+                            <TextView
+                                android:id="@+id/txt_wind"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/img_pressure"
+                                android:layout_centerHorizontal="true"
+                                android:layout_margin="10dp"
+                                android:layout_marginTop="10dp"
+                                android:text="Wind     "
+                                android:textSize="20dp" />
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card_pressure"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/card"
+                        android:layout_margin="5dp"
+
+                        android:layout_toEndOf="@+id/card_wind"
+                        app:cardCornerRadius="20dp"
+                        app:cardElevation="20dp">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/img_pressure"
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/pressure" />
+
+                            <TextView
+                                android:id="@+id/txt_pressure"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/img_pressure"
+                                android:layout_centerHorizontal="true"
+                                android:layout_margin="10dp"
+                                android:layout_marginTop="10dp"
+                                android:text="pressure"
+                                android:textSize="20dp" />
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card_humid"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/card"
+                        android:layout_margin="5dp"
+                        android:layout_toEndOf="@+id/card_pressure"
+                        app:cardCornerRadius="20dp"
+                        app:cardElevation="20dp">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/img_humid"
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/humid" />
+
+                            <TextView
+                                android:id="@+id/txt_humid"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/img_humid"
+                                android:layout_centerHorizontal="true"
+                                android:layout_margin="10dp"
+                                android:layout_marginTop="10dp"
+                                android:text="Humidity"
+                                android:textSize="20dp" />
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/layout_1"
+                    android:layout_marginTop="20dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="30dp">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card_rise"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/card_wind"
+                        android:layout_margin="5dp"
+                        app:cardCornerRadius="20dp"
+                        app:cardElevation="20dp">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp">
+
+                            <ImageView
+                                android:id="@+id/img_rise"
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/sunrise" />
+
+                            <TextView
+                                android:id="@+id/txt_sun"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/img_rise"
+                                android:layout_centerHorizontal="true"
+                                android:layout_margin="10dp"
+                                android:text="Sun Rise"
+                                android:textSize="20dp" />
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card_location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/card_pressure"
+                        android:layout_toEndOf="@+id/card_rise"
+                        app:cardCornerRadius="20dp"
+                        app:cardElevation="20dp">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="10dp">
+
+                            <ImageView
+                                android:id="@+id/img_location"
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/location" />
+
+                            <TextView
+                                android:id="@+id/txt_location"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/img_location"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginBottom="20dp"
+                                android:text="location"
+                                android:textSize="20dp" />
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card_set"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/card_humid"
+                        android:layout_margin="5dp"
+                        android:layout_toEndOf="@+id/card_location"
+                        app:cardCornerRadius="20dp"
+                        app:cardElevation="20dp">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp">
+
+                            <ImageView
+                                android:id="@+id/img_set"
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/sunset" />
+
+                            <TextView
+                                android:id="@+id/txt_set"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/img_set"
+                                android:layout_centerHorizontal="true"
+                                android:layout_margin="10dp"
+                                android:text="Sunset"
+                                android:textSize="20dp" />
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+            </RelativeLayout>
+            <Button
+                android:id="@+id/search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Search"
+                android:textColor="#000000"
+                android:background="@drawable/background"
+                app:backgroundTint="#FFEB00"
+                android:src="@drawable/ic_search"
+                android:layout_margin="20dp"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/params"
+                />
+
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

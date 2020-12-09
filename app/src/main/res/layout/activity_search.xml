@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SearchActivity">
+   <ImageButton
+       android:id="@+id/btn_back"
+       android:layout_width="50dp"
+       android:layout_height="50dp"
+       android:src="@drawable/ic_back"
+       android:layout_marginTop="20dp"
+       android:backgroundTint="#FFEB00"/>
+    <EditText
+        android:id="@+id/edt_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/btn_back"
+        android:backgroundTint="#FFEB00"
+        android:hint="Enter City Name ..."
+        android:layout_marginTop="20dp"/>
+    <Button
+        android:id="@+id/btn_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Search"
+        android:textColor="#000000"
+        android:background="@drawable/background"
+        app:backgroundTint="#FFEB00"
+        android:src="@drawable/ic_search"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/edt_search"
+        android:layout_marginTop="10dp"/>
+    <ImageView
+        android:id="@+id/img_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/btn_search"/>
+
+</RelativeLayout>
